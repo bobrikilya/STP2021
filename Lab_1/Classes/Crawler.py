@@ -12,7 +12,7 @@ class Crawler:
         for song in self.songs_list:
             with open(self.dir + '\\' + song, 'r', encoding='utf-8') as file:
                 for row in file:
-                    self.rows_list.add(row)
+                    self.rows_list.append(row)
         return self.rows_list
 
 # cr = Crawler('songs', 3, 4)

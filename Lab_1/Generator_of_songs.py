@@ -8,7 +8,8 @@ dir, verse_size_1, verse_size_2, chorus_size = map(str, input('Введите н
 
 ex_crawl = Crawler(dir)
 ex_gen = Generator(verse_size_1, verse_size_2, chorus_size)
-Saver().saver_function(ex_gen.lyrics_generation(ex_crawl.crawl_function()))
+ex_save = Saver(ex_gen.lyrics_generation(ex_crawl.crawl_function()))
+ex_save.saver_function()
 
 
 
