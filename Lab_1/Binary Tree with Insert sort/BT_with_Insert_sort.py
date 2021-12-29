@@ -3,10 +3,8 @@ class Node:
         self.left = None
         self.right = None
         self.data = data
-        self.arr = []
 
-    def insertion_sort(self):
-        array = self.arr
+    def insertionSort(array):
         for i in range(1, len(array)):
             key = array[i]
             j = i - 1
@@ -14,23 +12,23 @@ class Node:
                 array[j + 1] = array[j]
                 j -= 1
             array[j + 1] = key
+        #       print(array)
         return array
 
-    def print_tree(self):
+    # Print the tree
+    def PrintTree(self):
         if self.left:
-            self.left.print_tree()
+            self.left.PrintTree()
+        print(self.data),
         if self.right:
-            self.right.print_tree()
-        self.arr.append(self.data)
-        return self.arr
+            self.right.PrintTree()
 
 
+# Use the insert method to add nodes
 root = Node(12)
-root.left = Node(2)
-root.right = Node(3)
-root.left.left = Node(4)
-# print(root.print_tree())
-# root.insertion_sort()
-
+root.insert(6)
+root.insert(14)
+root.insert(3)
+root.PrintTree()
 
 
